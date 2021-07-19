@@ -50,6 +50,7 @@ navigator.mediaDevices.getUserMedia( {
         grid.append(newUser.getElement());
         call.on('stream', (userVideoStream) => {
             newUser.setSrc(userVideoStream);
+            console.log('stream connected');
         })
     })
     socket.on('user-connected', (userId) => {
